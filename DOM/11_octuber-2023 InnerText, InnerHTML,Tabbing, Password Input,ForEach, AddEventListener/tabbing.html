@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabbings</title>
+    <style>
+        .tab {
+            width: 1000px;
+            margin: auto;
+            border: 1px solid black;
+        }
+
+        .tabHead {
+            background-color: aqua;
+            padding: 10px;
+        }
+
+        .tabBody {
+            height: 300px;
+            font-size: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .tabHead button {
+            margin-right: 20px;
+            padding: 15px 30px;
+            background-color: black;
+            color: aliceblue;
+            font-size: 20px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .tabContent {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="tab">
+        <div class="tabHead">
+            <button onclick="tabcontent(0)"> tab 1</button>
+            <button onclick="tabcontent(1)"> tab 2</button>
+            <button onclick="tabcontent(2)"> tab 3</button>
+            <button onclick="tabcontent(3)"> tab 4</button>
+        </div>
+        <div class="tabBody">
+            Content of tab 1
+        </div>
+        <div class="tabContent">
+            <div>
+                Content of tab 1
+            </div>
+            <div>
+                Content of tab 2
+            </div>
+            <div>
+                Content of tab 3
+            </div>
+            <div>
+                Content of tab 4
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+     let ContentBox = document.querySelector('.tabBody');
+     //Assigning div with class name .tabbody to content box variable 
+    let allContent = document.querySelectorAll('.tabContent div');
+   //Assigning all the div present in the div with  class name .tabContent to content box variable 
+
+   //defining the onclick function used in button
+    function tabcontent(i) {
+        let Text = allContent[i].innerText;
+        ContentBox.innerText = Text;
+    }
+
+
+</script>
+
+</html>

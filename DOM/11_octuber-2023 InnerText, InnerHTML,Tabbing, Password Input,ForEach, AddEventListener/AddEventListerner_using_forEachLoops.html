@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button class="muBtn">Hello</button>
+    <button class="muBtn">Hello</button>
+    <button class="muBtn">Hello</button>
+    <button class="muBtn">Hello</button>
+    <button class="muBtn">Hello</button>
+    <button class="muBtn">Hello</button>
+    <button class="muBtn">Hello</button>
+    <button class="muBtn">Hello</button>
+    <button class="muBtn">Hello</button>
+    <button class="muBtn">Hello</button>
+    <button class="muBtn">Hello</button>
+    <button class="muBtn">Hello</button>
+    <button class="muBtn">Hello</button>
+    <button class="muBtn">Hello</button>
+    <button class="muBtn">Hello</button>
+    <button class="muBtn">Hello</button>
+    <button class="muBtn">Hello</button>
+</body>
+<script>
+    let allBtn = document.querySelectorAll('.muBtn');
+    console.log(allBtn);
+    allBtn.forEach((el)=>{
+        el.addEventListener('click',()=>{
+            alert('You have clicked the Button');
+        });
+    });
+</script>
+</html>

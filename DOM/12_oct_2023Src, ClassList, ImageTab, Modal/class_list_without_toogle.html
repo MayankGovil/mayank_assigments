@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+
+    </title>
+    <style>
+        .main {
+            width: 1000px;
+            padding: 20px;
+            color: black;
+            margin: auto;
+            font-size: 30px;
+            border: 4px solid red !important;
+        }
+
+        .active {
+           
+            background-color: black;
+            color: aqua;
+            border: 4px solid cyan !important;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main" id="my_div">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate dignissimos minus pariatur, nihil
+        necessitatibus ex quos tenetur consectetur ipsum quaerat! Hic impedit tenetur sed quae, accusamus inventore
+        reiciendis quibusdam porro!
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo molestias dicta assumenda veritatis unde
+        consectetur, culpa id, ex ab totam dignissimos qui vitae, recusandae quaerat animi adipisci iusto cum dolorum!
+    </div>
+    <!-- Now to add and remove "Active" class css in div we used buttons and these are used clss_list methods with "add,remove,toggle" with classes css to be added and remove  when we click on button  -->
+    <button id="add_active">Add_Active</button>
+    <button id="remove_active">Remove_Active</button>
+    
+</body>
+<script>
+    let mydiv = document.getElementById('my_div');
+    let add_btn = document.getElementById("add_active");
+    let removeBtn = document.getElementById("remove_active")
+
+    // here we use arrow function but there is cach in arrow fun that inarrow function there is no function name that why we store the arrow fun in a variable  
+
+    const Add_Active = () => {
+        mydiv.classList.add('active');
+    }
+    const Remove_Active = () => {
+        mydiv.classList.remove('active');
+
+    }
+        // Now, we add event listeners to the buttons to call the corresponding arrow functions when the buttons are clicked.
+        //javascript
+       
+        add_btn.addEventListener('click', Add_Active);
+        removeBtn.addEventListener('click', Remove_Active);
+    // When the "Add_Active" button is clicked, the `Add_Active` function is called, which adds the "active" class to the div  element.Conversely, when the "Remove_Active" button is clicked, the`Remove_Active` function is called, which removes the "active" class from the div element.
+
+</script>
+
+</html>
+<!-- The code you provided is a JavaScript solution that adds and removes the "active" class from a div element when the
+corresponding buttons are clicked. Here's a step-by-step explanation of the code:
+
+1. First, we select the div element and the buttons using the `getElementById` method.
+
+
+javascript
+let mydiv = document.getElementById('my_div');
+let add_btn = document.getElementById("add_active");
+let removeBtn = document.getElementById("remove_active")
+​
+
+
+2. Next, we define an arrow function called `Add_Active` that adds the "active" class to the div element when called.
+
+
+javascript
+const Add_Active = () => {
+mydiv.classList.add('active');
+}
+​
+
+
+3. Similarly, we define another arrow function called `Remove_Active` that removes the "active" class from the div
+element when called.
+
+
+javascript
+const Remove_Active = () => {
+mydiv.classList.remove('active');
+}
+​
+
+
+4. Now, we add event listeners to the buttons to call the corresponding arrow functions when the buttons are clicked.
+
+
+javascript
+add_btn.addEventListener('click', Add_Active);
+removeBtn.addEventListener('click', Remove_Active);
+​
+
+
+When the "Add_Active" button is clicked, the `Add_Active` function is called, which adds the "active" class to the div
+element. Conversely, when the "Remove_Active" button is clicked, the `Remove_Active` function is called, which removes
+the "active" class from the div element. -->

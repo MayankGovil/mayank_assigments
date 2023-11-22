@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .main {
+
+            width: 500px;
+            height: 400px;
+            background-color: aqua;
+            position: relative;
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <input type="text" name="First_name" placeholder="FIRST NAME"><br />
+        <input type="text" name="Last_Name" placeholder="LAST NAME"><br />
+        <input type="email" name="email" placeholder="Email_id">
+        <button onclick="myFunction()" id="my_btn">Submit</button><br />
+        
+    </div>
+</body>
+<script>
+    let main = document.querySelector(".main");
+    console.log(main);
+    main.addEventListener('click', () => {
+        main.style.background = 'red';
+    });
+</script>
+
+</html>

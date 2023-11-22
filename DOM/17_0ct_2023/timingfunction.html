@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<style type="text/css">
+		button {
+			padding: 12px;
+			background: black;
+			color: skyblue;
+		}
+	</style>
+</head>
+
+<body>
+	<button onclick="myset()"> CLICK ME</button>
+	<button onclick="mysetstop()">STOP</button><br>
+	<input type="password" name="" id="usrinp">&nbsp; &nbsp;<button onclick="show()">show</button>
+
+</body>
+<script type="text/javascript">
+	let usrinp = document.getElementById('usrinp');
+
+	const show = () => {
+		usrinp.type = 'text';
+		setTimeout(hide, 3000);
+	}
+	const hide = () => {
+		usrinp.type = 'password';
+	}
+
+
+
+
+
+	let timevar;
+	const consolefunction = () => {
+		console.log("checked");
+	}
+
+
+	const myset = () => {
+		timevar = setInterval(consolefunction, 500);
+	}
+
+	const mysetstop = () => {
+		clearTimeout(timevar);
+	}
+
+</script>
+
+</html>

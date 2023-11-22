@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var n = 5;
+        var str = "";
+
+        // *****
+        // *****
+        // *****
+        // *****
+        // *****
+
+
+        for (let i = 1; i <= n; i++) {
+
+            for (let j = 1; j <= n; j++) {
+                str += "*";
+            }
+
+            str += "\n"; // Add new line
+        }
+
+
+        //Q2} Hollow Square 
+        // *****
+        // *   *
+        // *   *
+        // *   *
+        // *****
+        for (let i = 1; i <= n; i++) {
+            for (let j = 1; j <= n; j++) {
+                if (i === 1 || i === n || j === 1 || j === n) {
+                    str += '*';
+                } else {
+                    str += ' ';
+                }
+            }
+            str += '\n';
+        }
+
+
+        //Q3}Rhombus Star Pattern Program
+        //     *****
+        //    *****
+        //   *****
+        //  *****
+        // *****
+        for (let i = 1; i <= n; i++) {
+            let row = '';
+            for (let j = 1; j <= n - i; j++) {
+                row += ' ';
+            }
+            for (let j = 1; j <= n; j++) {
+                row += '*';
+            }
+            str += row + '\n';
+        }
+
+
+        //Q4}Hollow Rombus
+        //     *****
+        //    *   *
+        //   *   *
+        //  *   *
+        // *****
+        for (let i = 1; i <= n; i++) {
+            let row = '';
+            for (let k = 1; k <= n - i; k++) {
+                row += ' ';
+            }
+            for (let j = 1; j <= n; j++) {
+                if (j === 1 || j === n || i === 1 || i === n) {
+                    row += '*';
+                } else {
+                    row += ' ';
+                }
+            }
+            str += row + '\n';
+        }
+        // Q5} Mirrored Rhombus Pattern Program
+
+        // *****
+        //  *****
+        //   *****
+        //    *****
+        //     *****
+        for (let i = n; i >= 1; i--) {
+            let row = '';
+            for (let j = 1; j <= n - i; j++) {
+                row += ' ';
+            }
+            for (let j = 1; j <= n; j++) {
+                row += '*';
+            }
+            str += row + '\n';
+        }
+
+
+        // Q6}Hollow Mirrored Rhombus Pattern Program
+
+        // *****
+        //  *   *
+        //   *   *
+        //    *   *
+        //     *****
+        for (let i = 1; i <= n; i++) {
+            let row = '';
+            for (let j = 1; j < i; j++) {
+                row += ' ';
+            }
+            for (let j = 1; j <= n; j++) {
+                if (j === 1 || j === n || i === 1 || i === n) {
+                    row += '*';
+                } else {
+                    row += ' ';
+                }
+            }
+            str += row + '\n';
+        }
+
+
+        //Q7}Left Triangle Pattern Program
+        // * 
+        // * * 
+        // * * * 
+        // * * * * 
+        // * * * * * 
+
+        for (let i = 1; i <= n; i++) {
+
+            for (let j = 1; j <= i; j++) {
+                str += '* ';
+            }
+            str += '\n';
+        }
+
+        // Q8} Hollow Left Triangle Pattern Program
+
+        // * 
+        // * * 
+        // *   * 
+        // *     * 
+        // * * * * * 
+        for (let i = 1; i <= n; i++) {
+            for (let j = 1; j <= i; j++) {
+                if (j === 1 || j === i || i === n) {
+                    str += '* ';
+                } else {
+                    str += '  ';
+                }
+            }
+            str += '\n';
+        }
+
+
+        // Q9} Right Triangle Pattern Program
+        //          * 
+        //        * * 
+        //      * * * 
+        //    * * * * 
+        //  * * * * * 
+
+
+        for (let i = 1; i <= n; i++) {
+            for (let j = 1; j <= n; j++) {
+                if (j <= n - i) {
+                    str += '  ';
+                } else {
+                    str += '* ';
+                }
+            }
+            str += '\n';
+        }
+
+
+        // Q10} Hollow Right Triangle Pattern Program
+        //         * 
+        //       * * 
+        //     *   * 
+        //   *     * 
+        // * * * * * 
+        for (let i = 1; i <= n; i++) {
+            for (let j = 1; j <= n - i; j++) {
+                str += '  ';
+            }
+            for (let j = 1; j <= i; j++) {
+                if (j === 1 || j === i || i === n ||i===0) {
+                    str += '* ';
+                } else {
+                    str += '  ';
+                }
+            }
+            str += '\n';
+        }
+
+
+
+        // Q11} Inverted Left Triangle Pattern Program
+        // * * * * * 
+        // * * * * 
+        // * * * 
+        // * * 
+        // * 
+
+        for (let i = n; i >= 1; i--) {
+            let row = '';
+            for (let j = 1; j <= i; j++) {
+                str += '* ';
+            }
+            str += '\n';
+        }
+
+
+        // Q12} Hollow Inverted Left Triangle Pattern Program
+        // * * * * * 
+        // *     * 
+        // *   * 
+        // * * 
+        // * 
+
+        for (let i = n; i >= 1; i--) {
+            let row = '';
+            for (let j = 1; j <= i; j++) {
+                if (j === 1 || j === i || i === n) {
+                    row += '* ';
+                } else {
+                    row += '  ';
+                }
+            }
+            str += row + '\n';
+        }
+
+
+        // Q13}Inverted Right Triangle Pattern Program
+        //    * * * * * 
+        //      * * * * 
+        //        * * * 
+        //          * * 
+        //            * 
+
+        for (let i = 1; i <= n; i++) {
+            for (let j = 1; j <= n; j++) {
+                if (j <= i - 1) {
+                    str += '  ';
+                } else {
+                    str += '* ';
+                }
+            }
+            str += '\n';
+        }
+
+
+        // Q14} Hollow Inverted Right Triangle Pattern
+        // * * * * * 
+        //   *     * 
+        //     *   * 
+        //       * * 
+        //         * 
+        for (let i = n; i >= 1; i--) {
+            let row = '';
+            for (let j = 1; j <= n - i; j++) {
+                row += '  ';
+            }
+            for (let j = 1; j <= i; j++) {
+                if (j === 1 || j === i || i === n) {
+                    row += '* ';
+                } else {
+                    row += '  ';
+                }
+            }
+            str += row + '\n';
+        }
+
+
+
+
+        // Print the star pattern
+        console.log(str);
+    </script>
+</body>
+
+</html>

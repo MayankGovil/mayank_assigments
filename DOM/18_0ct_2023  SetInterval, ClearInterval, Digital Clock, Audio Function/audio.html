@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audio</title>
+</head>
+
+<body>
+    <button onclick="PlayAudio()">Play Music</button>
+    <button onclick="PauseAudio()">Play Music</button>
+</body>
+<script>
+    var audioElement = document.createElement('audio');  // Create an empty HTML5 Audio element
+    audioElement.src = 'music.mp3';                     // Set the source of the audio file to play
+    function PlayAudio() {
+        audioElement.play();                          // Start playing the audio
+    }
+    function PauseAudio() {
+        audioElement.pause();                      // Stop or pause the current track
+    }
+</script>
+
+</html>

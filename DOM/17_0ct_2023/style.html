@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+		.main{
+			width:420px;
+			height: 400px;
+			background: red;
+			background: pink;
+			padding: 15px;
+		}
+		.main input{
+			width: 100%;
+			margin:12px 8px;
+			border-radius: 5px;
+			height: 30px;
+
+		}
+		.main button{
+			padding: 12px;
+			background:black;
+			color: skyblue;
+			font-size:17px;
+			border-radius: 4px;
+
+		}
+
+	</style>
+</head>
+<body>
+      <div class="main">     
+       <input type="text" name="" id="inputname"><br>
+       <input type="number" name="" ><br>
+       <input type="email" name="" ><br>
+       <button id="mybtn" onclick="mrf()">save me</button>
+       </div>
+</body>
+<script type="text/javascript">
+	let div = document.querySelector('.main');
+	let btn = document.getElementById('mybtn');
+	let inputname = document.getElementById('inputname');
+
+       btn.style.transform = 'translateX(200px)'
+
+
+	div.addEventListener('mouseleave', ()=> {
+		
+		btn.style.transform = 'translateX(0)';
+
+
+		})
+	const mrf = ()=> {
+		
+		console.log('check');
+
+
+		}
+      
+         
+
+
+		
+	
+
+
+
+</script>
+</html>

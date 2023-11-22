@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faq</title>
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .FAQ_section {
+            background: #f5f6fa !important;
+            padding: 20px;
+            margin: 50px;
+            justify-content: center;
+            align-items: center;
+            top: 0%;
+            left: 40%;
+
+        }
+
+        .FAQ_Head {
+            text-align: center;
+            font-size: 40px;
+            text-transform: capitalize;
+            justify-content: center;
+            margin: auto;
+            padding: 20px;
+            font-weight: bold;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            color: blue;
+        }
+
+        .faqitem {
+            border: 5px double black;
+            margin: auto;
+            width: 1000px;
+        }
+
+        .faqQues {
+            background-color: cadetblue;
+            border-bottom: 2px solid black;
+            height: 50px;
+            justify-content: space-between;
+            display: flex;
+            flex-wrap: wrap;
+
+        }
+
+        .faqQues h1 {
+            font-size: 30px;
+            text-align: left;
+            text-transform: capitalize;
+            padding: 10px;
+        }
+
+        .faqQues button {
+            cursor: pointer;
+            border: none;
+            outline: none;
+            background-color: transparent;
+            float: right;
+            font-size: 25px;
+            font-weight: bold;
+            padding-right: 20px;
+            cursor: pointer;
+        }
+
+        .faqAnswer {
+            font-family: 'Times New Roman', Times, serif;
+            background-color: aquamarine;
+            justify-content: center;
+            align-items: center;
+            font-size: 20px;
+            line-height: 30px;
+            padding: 10px;
+            margin: auto;
+            border-bottom: 2px solid red;
+            display: none;
+        }
+
+        .Activeans {
+            display: block !important;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="FAQ_section">
+        <h2 class="FAQ_Head">Frequent Ask Question</h2>
+        <div class="faqitem">
+            <div class="faqQues">
+                <h1>What is accordion?</h1>
+                <button class="btn">+</button>
+            </div>
+            <div class="faqAnswer">
+                An accordion or collapsible is a widget that allows the user to expand and collapse sections of content.
+                It typically consists of one or more
+            </div>
+        </div>
+        <div class="faqitem">
+            <div class="faqQues">
+                <h1>What is accordion?</h1>
+                <button class="btn">+</button>
+            </div>
+            <div class="faqAnswer">
+                An accordion or collapsible is a widget that allows the user to expand and collapse sections of content.
+                It typically consists of one or more
+            </div>
+        </div>
+        <div class="faqitem">
+            <div class="faqQues">
+                <h1>What is accordion?</h1>
+                <button class="btn">+</button>
+            </div>
+            <div class="faqAnswer">
+                An accordion or collapsible is a widget that allows the user to expand and collapse sections of content.
+                It typically consists of one or more
+            </div>
+        </div>
+        <div class="faqitem">
+            <div class="faqQues">
+                <h1>What is accordion?</h1>
+                <button class="btn">+</button>
+            </div>
+            <div class="faqAnswer">
+                An accordion or collapsible is a widget that allows the user to expand and collapse sections of content.
+                It typically consists of one or more
+            </div>
+        </div>
+        <div class="faqitem">
+            <div class="faqQues">
+                <h1>What is accordion?</h1>
+                <button class="btn">+</button>
+            </div>
+            <div class="faqAnswer">
+                An accordion or collapsible is a widget that allows the user to expand and collapse sections of content.
+                It typically consists of one or more
+            </div>
+        </div>
+        <div class="faqitem">
+            <div class="faqQues">
+                <h1>What is accordion?</h1>
+                <button class="btn">+</button>
+            </div>
+            <div class="faqAnswer">
+                An accordion or collapsible is a widget that allows the user to expand and collapse sections of content.
+                It typically consists of one or more
+            </div>
+        </div>
+        <div class="faqitem">
+            <div class="faqQues">
+                <h1>What is accordion?</h1>
+                <button class="btn">+</button>
+            </div>
+            <div class="faqAnswer">
+                An accordion or collapsible is a widget that allows the user to expand and collapse sections of content.
+                It typically consists of one or more
+            </div>
+        </div>
+        <!-- Add other FAQ items here -->
+    </div>
+
+    <script type="text/javascript">
+
+        // Select all buttons with the class "btn"
+        let allBtns = document.querySelectorAll(".btn");
+
+        // Add a click event listener to each button
+        allBtns.forEach((button) => {
+            button.addEventListener("click", () => {
+                //Get the next sibling element, which is the answer div is store in currentAnswer variable
+                let currentAnswer = button.parentElement.nextElementSibling;
+
+
+                // Select all answer divs
+                let allAnswers = document.querySelectorAll(".faqAnswer");
+
+
+                // Loop through all answer divs and hide those that are not the current answer
+                allAnswers.forEach((answer) => {
+                    if (answer != currentAnswer) {
+                        answer.classList.remove("Activeans");
+                    }
+                });
+
+                // Toggle the visibility of the current answer
+                currentAnswer.classList.toggle('Activeans');
+            });
+        });
+
+
+
+
+        //Certainly! Let's break down the line of code let currentAnswer = button.parentElement.nextElementSibling; in detail:-
+
+        //answer
+        //button:
+        // button is a reference to the button element that was clicked.In this case, it refers to the + button associated with a specific FAQ item.
+        //button.parentElement:
+        //button.parentElement retrieves the parent element of the button.In the HTML structure, the button is a child of the < div > with the class faqQues, which contains both the question and the button.
+        //button.parentElement.nextElementSibling:
+        // nextElementSibling is a DOM property that returns the next sibling element of the specified element.In this case, it retrieves the next sibling element of the < div > with the class faqQues. The next sibling is the < div > with the class faqAnswer.
+        //let currentAnswer = ...:
+        //The result of the above expression is assigned to the variable currentAnswer.So, currentAnswer now holds a reference to the < div > with the class faqAnswer that is associated with the clicked button.
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mark Sheet Calculator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            text-align: center;
+        }
+        .container {
+            width: 300px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Mark Sheet Calculator</h1>
+        <label for="subject1">Subject 1:</label>
+        <input type="number" id="subject1" placeholder="Enter marks for Subject 1"><br><br>
+        <label for="subject2">Subject 2:</label>
+        <input type="number" id="subject2" placeholder="Enter marks for Subject 2"><br><br>
+        <label for="subject3">Subject 3:</label>
+        <input type="number" id="subject3" placeholder="Enter marks for Subject 3"><br><br>
+        <label for="subject4">Subject 4:</label>
+        <input type="number" id="subject4" placeholder="Enter marks for Subject 4"><br><br>
+        <label for="subject5">Subject 5:</label>
+        <input type="number" id="subject5" placeholder="Enter marks for Subject 5"><br><br>
+        <button onclick="calculateMarks()">Calculate</button><br><br>
+        <p>Total Marks: <span id="totalMarks">00</span></p>
+        <p>Percentage: <span id="percentage">0%</span></p>
+    </div>
+
+    <script>
+        function calculateMarks() {
+            var subject1 = Number(document.getElementById("subject1").value) || 0;
+            var subject2 = Number(document.getElementById("subject2").value) || 0;
+            var subject3 = Number(document.getElementById("subject3").value) || 0;
+            var subject4 = Number(document.getElementById("subject4").value) || 0;
+            var subject5 = Number(document.getElementById("subject5").value) || 0;
+
+            var totalMarks = subject1 + subject2 + subject3 + subject4 + subject5;
+            var percentage = (totalMarks / 500) * 100;
+
+            document.getElementById("totalMarks").innerHTML = totalMarks;
+            document.getElementById("percentage").innerHTML = percentage.toFixed(2) + "%";
+        }
+    </script>
+</bodNumber

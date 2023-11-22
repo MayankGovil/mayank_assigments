@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array</title>
+</head>
+
+<body>
+    <script>
+        var arr = new Array("hello", "class", 'morning', 'batch');
+        document.write(arr);
+        //OUTPUT:-hello,class,morning,batch
+
+        let z = [12, 20, 30, 40, 60, 70, 80];
+        for (let i = 0; i <= z.length; i++) {
+            console.log(z[i]);
+        };
+        console.log(z);//output : [12, 20, 30, 40, 60, 70, 80]
+
+
+        //to find the greatest num in array x
+        let y = [200, 12, 20, 30, 100, 50, 47, 78, 69, 80];
+        let max_num = y[0];
+        for (let i = 0; i < y.length; i++) {
+            if (y[i] >= max_num) {
+                max_num = y[i];
+            }
+        }
+        console.log(max_num);
+
+
+
+        //to find the smallest num in array x
+        let x = [200, 12, 20, 30, 100, 50, 47, 78, 89, 99, 2,120]
+        let min_num = Infinity;
+        for (let j = 0; j <= x.length; j++) {
+            if (min_num > x[j]) {
+                min_num = x[j]
+            }
+        }
+       console.log(min_num);
+
+
+
+        //q2 to find second largest value in array
+        let a = [200, 12, 20, 30, 100, 50,150];
+        let largest = -Infinity;
+        let Second_largest = -Infinity;
+        for (let i = 0; i < a.length; i++) {
+            if (a[i] > largest) {
+                largest = a[i];
+            }
+            if(a[i]>Second_largest && a[i]<largest){
+                Second_largest=a[i];
+            }
+        }
+        console.log(largest);
+        console.log(Second_largest);
+
+
+        //q3 to find second min value in array
+        let b = [200, 12, 20, 30, 2, -1,100, 50, 150, 8];
+        let smallest=Infinity;
+        let second_smallest=Infinity;
+        for (let j = 0; j <= b.length; j++) {
+            if (smallest > b[j]){
+                smallest=b[j];
+            }
+            if(second_smallest>b[j] && b[j]>smallest){
+                second_smallest=b[j];
+            }
+        }
+        console.log(smallest);
+        console.log(second_smallest);
+     
+
+
+    </script>
+    //q1 to find min value in array
+    //q2 to find second largest value in array
+    //q3 to find the second min value in array
+</body>
+
+</html>

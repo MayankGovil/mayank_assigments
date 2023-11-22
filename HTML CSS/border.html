@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<style type="text/css">
+		.main{
+			width: 280px;
+			height: 480px;
+			background: skyblue;
+			position: relative;
+			padding: 20px;
+			overflow: hidden;
+		}
+		.border{
+			width: 200%;
+			height: 40px;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%,-50%);
+         
+		}
+		.border1{
+			background: orange;
+			   animation: rotate 4s infinite linear; 
+		}
+		.border2{
+			background: yellow;
+			   animation: rotate 8s infinite linear; 
+		}
+		.border3{
+			background: orange;
+			   animation: rotate 12s infinite linear; 
+		}
+		.inner{
+			width:calc(100% - 40px);
+			height: calc(100% - 40px);
+			background: skyblue;
+			position: absolute;
+		}
+		@keyframes rotate{
+			100%{
+				transform:translate(-50%,-50%) rotate(360deg);
+			}
+		}
+	</style>
+</head>
+<body>
+    <div class="main">
+    	<div class="border border1"></div>
+    	<div class="border border2"></div>
+    	<div class="border border3"></div>
+    	<div class="inner"></div>
+    </div>
+</body>
+</html>

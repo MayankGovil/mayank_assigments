@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Meta tags and title -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faq</title>
+    <!-- CSS styles -->
+    <style type="text/css">
+        /* CSS styles go here */
+    </style>
+</head>
+
+<body>
+    <!-- FAQ section -->
+    <div class="FAQ_section">
+        <h2 class="FAQ_Head">Frequent Ask Question</h2>
+        <!-- FAQ items -->
+        <div class="faqitem">
+            <!-- Question container -->
+            <div class="faqQues">
+                <h1>What is accordion?</h1>
+            </div>
+            <!-- Answer container (initially hidden) -->
+            <div class="faqAnswer">
+                An accordion or collapsible is a widget that allows the user to expand and collapse sections of content.
+                It typically consists of one or more
+            </div>
+        </div>
+        <!-- Repeat the FAQ items here (removed for brevity) -->
+    </div>
+</body>
+
+<!-- JavaScript code -->
+<script type="text/javascript">
+    // Select all elements with class "faqQues"
+    let allQuestion = document.querySelectorAll(".faqQues");
+
+    // For each question element, add a click event listener
+    allQuestion.forEach((question) => {
+        question.addEventListener("click", () => {
+            // Get the answer element associated with the clicked question
+            let currentanswer = question.nextElementSibling;
+
+            // Select all answer elements
+            let allAnswer = document.querySelectorAll(".faqAnswer");
+
+            // Loop through all answer elements and hide them, except for the clicked question's answer
+            allAnswer.forEach((answer) => {
+                if (answer != currentanswer) {
+                    answer.classList.remove("Activeans");
+                }
+            });
+
+            // Toggle the visibility of the clicked question's answer
+            currentanswer.classList.toggle('Activeans');
+        })
+    });
+</script>
+
+</html>

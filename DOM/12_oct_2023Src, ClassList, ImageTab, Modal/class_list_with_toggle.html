@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+
+    </title>
+    <style>
+        .main {
+            width: 1000px;
+            padding: 20px;
+            color: black;
+            margin: auto;
+            font-size: 30px;
+            border: 4px solid red !important;
+        }
+
+        .active {
+           
+            background-color: black;
+            color: aqua;
+            border: 4px solid cyan !important;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main" id="my_div">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate dignissimos minus pariatur, nihil
+        necessitatibus ex quos tenetur consectetur ipsum quaerat! Hic impedit tenetur sed quae, accusamus inventore
+        reiciendis quibusdam porro!
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo molestias dicta assumenda veritatis unde
+        consectetur, culpa id, ex ab totam dignissimos qui vitae, recusandae quaerat animi adipisci iusto cum dolorum!
+    </div>
+    <!-- Now to add and remove "Active" class css in div we used buttons and these are used clss_list methods with "add,remove,toggle" with classes css to be added and remove  when we click on button  -->
+    
+    <button id="Add_Active_bytoggle">Toggle</button>
+    
+</body>
+<script>
+    let mydiv = document.getElementById('my_div');
+    let toggle = document.getElementById("Add_Active_bytoggle");
+   
+
+    // here we use arrow function but there is cach in arrow fun that inarrow function there is no function name that why we store the arrow fun in a variable  name toogle
+
+    const Add_Active_byusing_toggle = () => {
+        mydiv.classList.toggle('active');
+    }
+    
+        // Now, we add event listeners to the buttons to call the corresponding arrow functions when the buttons are clicked.
+        //javascript
+       
+        Add_Active_bytoggle.addEventListener('click', Add_Active_byusing_toggle);
+       
+
+</script>
+
+</html>
+<!-- This HTML and JavaScript code sets up a simple webpage with a main content div and a button. The JavaScript part of the code adds functionality to the button, allowing it to toggle the presence of a CSS class named "active" on the main content div. Let's break down the code step by step:
+
+HTML Part:
+Document Type Declaration (<!DOCTYPE html>):
+
+Specifies the HTML version being used.
+HTML Tag (<html lang="en">):
+
+The root element of the HTML document with the specified language attribute.
+Head Section (<head>):
+
+Contains meta-information about the HTML document, such as character set, viewport settings, and the title.
+Meta Tags (<meta charset="UTF-8"> and <meta name="viewport" content="width=device-width, initial-scale=1.0">):
+
+Specifies the character set and viewport settings for responsive design.
+Title Tag (<title>):
+
+Provides a title for the HTML document (currently empty).
+Style Section (<style>):
+
+Contains CSS styles for the webpage.
+Defines a style for the class .main, setting width, padding, color, margin, font size, and a red border.
+Defines a style for the class .active, setting background color, text color, and a cyan border.
+-->
+
+
+<!-- Body Part:
+Main Content Div (<div class="main" id="my_div">...</div>):
+
+A div with the class "main" and an ID of "my_div" containing some placeholder text.
+Button (<button id="Add_Active_bytoggle">Toggle</button>):
+
+A button with the ID "Add_Active_bytoggle" and the label "Toggle". -->
+
+
+<!-- Script Part:
+JavaScript Section (<script>):
+JavaScript code for adding interactivity to the webpage.
+Retrieves the main content div and the button using document.getElementById.
+Defines an arrow function Add_Active_byusing_toggle that toggles the presence of the "active" class on the main content div using classList.toggle.
+Adds an event listener to the button, specifying that when the button is clicked, the Add_Active_byusing_toggle function should be called. -->
+
+<!--
+Explanation of JavaScript:
+let mydiv = document.getElementById('my_div');
+Retrieves the HTML element with the ID "my_div" and stores it in the variable mydiv.
+
+let toggle = document.getElementById("Add_Active_bytoggle");:
+Retrieves the HTML element with the ID "Add_Active_bytoggle" (the button) and stores it in the variable toggle.
+
+const Add_Active_byusing_toggle = () => { mydiv.classList.toggle('active'); }
+Defines an arrow function named Add_Active_byusing_toggle that toggles the "active" class on the main content div (mydiv) using classList.toggle.
+
+Add_Active_bytoggle.addEventListener('click', Add_Active_byusing_toggle);
+Adds an event listener to the button with Button_id Name(Add_Active_bytoggle) so that when Button is clicked, the Add_Active_byusing_toggle function is called.
+Adds an event listener that calls the function Add_Active_byusing_toggle when clicked on by clicking on this button.
+
+Summary:
+The code creates a webpage with a main content div and a button.
+The button, when clicked, toggles the presence of the "active" class on the main content div, changing its appearance based on the CSS styles defined for the "active" class. -->
+

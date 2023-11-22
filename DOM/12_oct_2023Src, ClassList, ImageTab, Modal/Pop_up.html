@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pop_up</title>
+
+    <style type="text/css">
+        /* Styles for the pop-up container */
+        button{
+           padding: 10px;
+           background:#b384e2;
+           font-size: 30px;
+           font-weight: bold;
+           color: white;
+           text-transform:uppercase;
+           margin: 10px 200px;
+        }
+        .pop_up {
+            width: 600px;
+            height: 400px;
+            background-color: aqua;
+            position: fixed;
+            border: 2px solid black;
+            top: -50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        /* Styles when the pop-up is active */
+        .active {
+            top: 50%;
+            z-index: 999999;
+            transition: 0.5s;
+        }
+
+        /* Styles for the close button inside the pop-up */
+        .pop_up>span {
+            font-size: 50px;
+            font-weight: bold;
+            cursor: pointer;
+            right: 10px;
+            top: 5px;
+            position: absolute;
+        }
+
+        /* Styles for the overlay */
+        .pop_overlay {
+            width: 100%;
+            height: 100vh;
+            background: #1683ff;
+            position: fixed;
+            top: 0;
+            left: 0;
+            transform: scale(0);
+            z-index: -9;
+        }
+
+        /* Styles when the overlay is active */
+        .active_pop_overlay {
+            transform: scale(1) !important;
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <!-- Button to open the pop-up -->
+    <button onclick="openPopUp()">open_pop_up</button>
+
+    <!-- The pop-up container -->
+    <div class="pop_up">
+        <!-- Close button represented by an 'x' -->
+        <span>&times;</span>
+    </div>
+
+    <!-- Overlay to darken the background when the pop-up is active -->
+    <div class="pop_overlay"></div>
+</body>
+
+<!-- JavaScript for handling pop-up functionality -->
+<script type="text/javascript">
+    // Selecting elements from the DOM 
+    let popup = document.querySelector(".pop_up");
+    let closebtn = document.querySelector(".pop_up span");
+    let pop_overlay = document.querySelector(".pop_overlay");
+
+    // Function to open the pop-up
+    const openPopUp = () => {
+       // assign the css in the dom variable assign above and assign the style using classList to add particualr css to each class 
+        popup.classList.toggle('active');
+        pop_overlay.classList.toggle("active_pop_overlay");
+    }
+
+    // Function to close the pop-up
+    const closePopUp = () => {
+        popup.classList.remove('active');
+        pop_overlay.classList.remove("active_pop_overlay");
+    }
+
+    // Adding click event listeners
+    closebtn.addEventListener("click", closePopUp);
+    pop_overlay.addEventListener('click', closePopUp);
+</script>
+</html>
+<!-- Explanation:
+HTML Structure:
+
+The HTML file includes meta tags, a title, a button to trigger the pop-up, a div for the pop-up content, and a div for an overlay.
+CSS Styling:
+
+CSS is used to style the pop-up container, close button, and overlay. Notably, the pop-up is initially positioned off-screen (top: -50%), and its appearance is modified when the 'active' class is added.
+JavaScript:
+
+The JavaScript code selects DOM elements using document.querySelector.
+The openPopUp function toggles the 'active' class on the pop-up and adds the 'active_pop_overlay' class to the overlay, making it visible.
+The closePopUp function removes the 'active' class from the pop-up and the 'active_pop_overlay' class from the overlay, hiding them.
+Event listeners are added to the close button and overlay, triggering the closePopUp function when clicked.
+This code creates a pop-up with a button to open it, a close button inside the pop-up, and an overlay for dimming the background. The JavaScript functions handle the toggling of classes to control the visibility of the pop-up and overlay. -->

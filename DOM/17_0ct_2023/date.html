@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Meta tags and title -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+</head>
+<body>
+    <!-- Date input field and a button -->
+    <input type="date" name="" id="userdate">
+    <button onclick="getdate()">Get date</button>
+</body>
+<script type="text/javascript">
+    // Define a function to get the date when the button is clicked
+    const getdate = () => {
+        // Retrieve the date value entered by the user
+        userinp = document.getElementById('userdate').value;
+        console.log(typeof(userinp)); // Log the data type of the user input
+    }
+
+    // Get the current date and time
+    let currentTime = new Date();
+
+    // Log various date and time components
+    console.log(currentTime.toDateString()); // Log the date in a human-readable format
+    console.log(currentTime.getTime()); // Log the timestamp in milliseconds since January 1, 1970
+    console.log(currentTime.getDate()); // Log the day of the month (1-31)
+    console.log(currentTime.getFullYear()); // Log the full year (e.g., 2023)
+    console.log(currentTime.getMonth()); // Log the month (0-11, where 0 is January and 11 is December)
+    console.log(currentTime.getMinutes()); // Log the minutes of the current time
+    console.log(currentTime.getMilliseconds()); // Log the milliseconds of the current time
+    console.log(currentTime.getSeconds()); // Log the seconds of the current time
+    console.log(currentTime.getHours()); // Log the hour of the current time
+</script>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Armstrong</title>
+</head>
+<body>
+    <script type="text/javascript">
+        let X=100;
+        let Y=1000;
+       for(let i=X;i<=Y;i++){
+        i=i.toString();
+        let len = i.length;
+        let sum=0;
+
+        for(let j=0;j<len;j++){
+            let num = Number(i[j]);
+
+            num = num** len;
+            sum=+num;
+        }
+        if (sum===Number(i)){
+            console.log(`The number ${i} is an Armstrong number`);
+             }else{
+                 console.log(`The number ${i} isn't an Armstrong number`);
+                 }
+       }
+    </script>
+</body>
+</html>

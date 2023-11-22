@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<style type="text/css">
+		.main{
+			width: 600px;
+			height: 700px;
+			border: 1px solid black;
+			margin: auto;
+		}
+		.head{
+			width: 200px;
+			height: 200px;
+			border-radius: 50%;
+			border: 1px solid black;
+			margin: auto;
+			position: relative;
+			background: blue;
+		}
+		.head_inner{
+			width: 150px;
+			height: 150px;
+			border-radius: 50%;
+			border: 1px solid black;
+			position: absolute;
+			left: 25px;
+			bottom: 0;
+			background: white;
+		}
+		.eye_left{
+			width: 30px;
+			height: 46px;
+			border-radius: 60%;
+            border: 1px solid black;
+            position: absolute;
+            top: -16%;
+            left: 44px;
+            background: white;
+		}
+		.eye_right{
+			width: 30px;
+			height: 46px;
+			border-radius: 60%;
+            border: 1px solid black;
+            position: absolute;
+            top: -16%;
+            left: 76px;
+            background: white;
+		}
+		.lens_left{
+           width: 9px;
+			height: 20px;
+			border-radius: 60%;
+            border: 1px solid black;
+            position: absolute;
+            top: 36%;
+            left: 9px;
+            background: black; 
+            z-index: 9;
+		}
+		.lens_right{
+			width: 9px;
+			height: 20px;
+			border-radius: 60%;
+            border: 1px solid black;
+            position: absolute;
+            top: 36%;
+            left: 9px;
+            background: black; 
+            z-index: 9;
+		}
+		.left_cornia{
+			width: 5px;
+			height: 9px;
+			border-radius: 60%;
+            border: 1px solid black;
+            position: absolute;
+            top: 36%;
+            left: 1px;
+            background: white; 
+            z-index: 10;
+		}
+		.nose{
+			width: 20px;
+			height: 20px;
+			border: 1px solid black;
+			border-radius: 50%;
+			position: absolute;
+			top: 17px;
+			left: 65px;
+			background: red;
+		}
+		.nose_inner{
+			width: 7px;
+			height: 7px;
+/*			border: 1px solid black;*/
+			border-radius: 50%;
+			box-shadow: 1px 0 4px black;
+			position: absolute;
+			top: 4px;
+			left: 2px;
+			background:white;
+		}
+		.nose_bottom{
+			width: 2px;
+			height:49px;
+			background: black;
+			position: absolute;
+			top: 38px;
+			left: 75px;
+		}
+		.mouth{
+			width: 80px;
+			height: 40px;
+			background: red;
+			border: 1px solid black;
+			position: absolute;
+			top: 87px;
+			left: 38px;
+			border-bottom-left-radius: 50px;
+			border-bottom-right-radius: 50px;
+		}
+		.left_body{
+			width: 80px;
+			height: 164px;
+			background: blue;
+			border: 1px solid black;
+			border-top-left-radius: 30px;
+			position: absolute;
+			top: 200px;
+			left: 21px;
+		}
+		.right_body{
+			width: 80px;
+			height: 164px;
+			background: blue;
+			border: 1px solid black;
+			border-top-right-radius: 30px;
+			position: absolute;
+			top: 200px;
+			left: 102px;
+		}
+		.pet{
+			width: 130px;
+			height: 130px;
+			border: 1px solid black;
+			border-radius: 50%;
+			position: absolute;
+			top: 204px;
+			left: 35px;
+			background: white;
+		}
+		.poket{
+			width: 80px;
+			height: 40px;
+			background: white;
+			border: 1px solid black;
+			position: absolute;
+			top: 74px;
+			left: 24px;
+			border-bottom-left-radius: 50px;
+			border-bottom-right-radius: 50px;
+		}
+		.left_foot{
+			width: 91px;
+			height: 20px;
+			background: white;
+			border: 1px solid black;
+			border-radius: 20px;
+			position: absolute;
+			top: 359px;
+			left: 11px;
+		}
+		.right_foot{
+			width: 91px;
+			height: 20px;
+			background: white;
+			border: 1px solid black;
+			border-radius: 20px;
+			position: absolute;
+			top: 359px;
+			left: 103px;
+		}
+		.left_hand{
+			width: 15px;
+			height: 64px;
+			background: blue;
+			border: 1px solid black;
+			border-radius: 20px;
+			position: absolute;
+			top: 216px;
+			left: 8px;
+		}
+		.left_palm{
+			width: 15px;
+			height: 15px;
+			background: white;
+			border: 1px solid black;
+			border-radius: 50%;
+			position: absolute;
+			top: 55px;
+			left: -1px;
+		}
+		.right_hand{
+			width: 64px;
+			height: 15px;
+			background: blue;
+			border: 1px solid black;
+			border-radius: 20px;
+			position: absolute;
+			top: 216px;
+			left: 177px;
+		}
+		.right_palm{
+			width: 15px;
+			height: 15px;
+			background: white;
+			border: 1px solid black;
+			border-radius: 50%;
+			position: absolute;
+			top: -1px;
+			left: 55px;
+		}
+	</style>
+</head>
+<body>
+     <div class="main">
+     	<div class="head">
+     		<div class="head_inner">
+     			<div class="eye_left">
+     				<div class="lens_left">
+     					<div class="left_cornia"></div>
+     				</div>
+     			</div>
+     			<div class="eye_right">
+     				<div class="lens_right">
+     					<div class="left_cornia"></div>
+     				</div>
+     			</div>
+     			<div class="nose">
+     				<div class="nose_inner"></div>
+     			</div>
+     			<div class="nose_bottom"></div>
+     			<div class="mouth"></div>
+     	</div>
+     	<div class="left_body"></div>
+     	<div class="right_body"></div>
+     	<div class="pet">
+     		<div class="poket"></div>
+     	</div>
+     	<div class="left_foot"></div>
+     	<div class="right_foot"></div>
+     	<div class="left_hand">
+     		<div class="left_palm"></div>
+     	</div>
+     	<div class="right_hand">
+     		<div class="right_palm"></div>
+     	</div>
+     </div>
+</body>
+</html>

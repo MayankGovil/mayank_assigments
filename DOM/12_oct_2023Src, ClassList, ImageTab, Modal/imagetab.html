@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* CSS styles for the HTML elements */
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .inner {
+            width: 1000px;
+            margin: auto;
+            overflow: hidden;
+            border-radius: 5px;
+            border: 15px double black;
+        }
+        .main > img {
+            width: 100%;
+            border-bottom: 2px solid red !important;
+        }
+        .imgDiv {
+            padding: 10px;
+           
+            justify-content: space-between;
+            display: flex;
+            width: 17%;
+        }
+        .imgDiv img {
+            width: 100%;
+            cursor: pointer;
+            margin: 12px;
+        }
+    </style>
+</head>
+<body>
+    <div class="inner">
+        <div class="main">
+            <!-- The main image that will change when other images in the .imgDiv are clicked -->
+            <img src="images/8.jpg" alt="img8">
+        </div>
+        <div class="imgDiv">
+            <!-- Image thumbnails with onclick events to change the main image -->
+            <img onclick="changeimg(this)" src="images/1.jpg" alt="img1">
+            <img onclick="changeimg(this)" src="images/2.jpg" alt="img2">
+            <img onclick="changeimg(this)" src="images/3.jpg" alt="img3">
+            <img onclick="changeimg(this)" src="images/4.jpg" alt="img4">
+            <img onclick="changeimg(this)" src="images/5.jpg" alt="img5">
+        </div>
+    </div>
+</body>
+<script>
+    // JavaScript to change the main image when a thumbnail is clicked
+    let mainImg = document.querySelector(".main img");
+
+    function changeimg(collect) {
+        // The 'this' keyword refers to the element that triggered the function, in this case, the clicked thumbnail
+        let currentImg = collect.src;
+        // Set the 'src' attribute of the main image to the clicked thumbnail's 'src'
+        mainImg.src = currentImg;
+    }
+</script>
+</html>

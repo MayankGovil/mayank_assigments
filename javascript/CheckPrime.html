@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   
+</body>
+<script>
+    function checkPrime(num) {
+        if (num <= 1) {
+            return false;
+        }
+        for (var i = 2; i < num; i++) {
+            if (num % i === 0) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    var x = 5;
+    console.log(checkPrime(x));
+    function printPrimes(start, end) {
+        for (var i = start; i <= end; i++) {
+            if (checkPrime(i)) {
+                console.log(i);
+            }
+        }
+    }
+
+    var start = 1;
+    var end = 50;
+    printPrimes(start, end);
+</script>
+</html>

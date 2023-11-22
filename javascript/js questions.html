@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+
+
+
+    //Q1} find the letter length ?
+
+    var S = "welcome to wscubetech";
+    var letterCount = {};
+    console.log(letterCount);
+
+    // Loop through each character in the string
+    for (var i = 0; i < S.length; i++) {
+        var char = S.charAt(i).toLowerCase(); // Convert to lowercase to make it case-insensitive
+
+        // Check if the character is a letter
+        if (/^[a-zA-Z]$/.test(char)) {
+            // If the letter is already in the letterCount object, increment its count; otherwise, set its count to 1
+            letterCount[char] = (letterCount[char] || 0) + 1;
+        }
+    }
+
+    // Output the letter counts
+    for (var letter in letterCount) {
+        console.log(letter + ": " + letterCount[letter]);
+    }
+
+
+
+
+    //Q2} count number of letters and spaces in a string?
+    var inputString = "Welcome to Wscubetech";
+    var letterCount = 0;
+    var spaceCount = 0;
+
+    // Loop through each character in the string
+    for (var i = 0; i < inputString.length; i++) {
+        var currentChar = inputString[i];
+
+        // Check if the character is a letter
+        if ((currentChar >= 'a' && currentChar <= 'z') || (currentChar >= 'A' && currentChar <= 'Z')) {
+            letterCount++;
+        }
+
+        // Check if the character is a space
+        if (currentChar === ' ') {
+            spaceCount++;
+        }
+    }
+
+    // Output the counts
+    console.log("Number of letters: " + letterCount);
+    console.log("Number of spaces: " + spaceCount);
+
+
+
+
+
+</script>
+
+</html>

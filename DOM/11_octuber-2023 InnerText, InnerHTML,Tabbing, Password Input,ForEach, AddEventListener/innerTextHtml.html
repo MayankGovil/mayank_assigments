@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    <div class="main" id="main_div">
+        <ul>
+            <li>Hello ul</li>
+            <li>Hello ul</li>
+            <li>Hello ul</li>
+            <li>Hello ul</li>
+            <li>Hello ul</li>
+        </ul>
+        <ol>
+            <li>Hello ol</li>
+            <li>Hello ol</li>
+            <li>Hello ol</li>
+            <li>Hello ol</li>
+            <li>Hello ol</li>
+        </ol>
+        <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id, a magni! Culpa delectus voluptatum aliquam distinctio explicabo nobis fugit laboriosam, maiores veniam nemo fuga recusandae optio perspiciatis? Atque, ipsa optio!
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, iusto non cumque animi laborum sit nostrum, inventore placeat ducimus necessitatibus consequuntur sapiente consequatur ab optio molestiae quo a accusamus assumenda?
+        </p>
+    </div>
+</body>
+<script>
+// to select div wirh class name is main we use dom selector
+let Div = document.getElementById('main_div') ;
+console.log(Div);
+// to get content/text in main div we use .innertext() with dom selector like this 
+let text_Div = document.getElementById('main_div').innerText ;
+console.log(text_Div);
+
+//to get the  the content or text in html form like a broweser or conten/text with there respective tag we use innerHtml() with dom selctor
+div=Div.innerHTML;
+console.log(div);
+</script>
+</html>

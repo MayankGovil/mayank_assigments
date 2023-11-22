@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital_clock</title>
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+
+        }
+
+        body {
+            background: #29374a;
+            /* fallback for old browsers */
+            background: -webkit-linear-gradient(to right, #5e6ff5, #29374a);
+            /* Chrome 10-25, Safari 5.1-6 */
+          
+            color: #fff;
+            font-family: Arial, sans-serif;
+            margin: 0px;
+            padding: 0px;
+            overflow: hidden;
+        }
+
+        .clock {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 1000px;
+            height: 500px;
+            background-color: black;
+            border: 5px solid  gold;
+            border-radius: 5px;
+            color:magenta;
+            text-align: center;
+            justify-content: center;
+        }
+
+        .time,
+        .date {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            padding: 30px;
+            font-size: 50px;
+            font-weight: bold;
+            margin: 50px 0px;
+
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="clock">
+        <div class="time"></div>
+        <div class="date"></div>
+    </div>
+    <script>
+        let time = document.querySelector('.time');
+        let date = document.querySelector('.date');
+
+        const timeFunction = () => {
+            let Current_Time = new Date();
+
+            let Current_Hours = Current_Time.getHours(); //hours
+            let Current_Minute = Current_Time.getMinutes(); //minute
+            let Current_Seconds = Current_Time.getSeconds();//seconds
+            let am_pm = (Current_Hours >= 12) ? 'PM' : 'AM'
+            let Current_Date = Current_Time.getDate();//Today's date
+            let Current_Month = Current_Time.getMonth();//
+            let Current_year = Current_Time.getFullYear();
+            let Current_weekday = Current_Time.getDay();
+
+            let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+
+            let months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+
+            Current_Hours = (Current_Hours > 12) ? Current_Hours - 12 : Current_Hours;
+            Current_Hours = Current_Hours < 10 ? "0" + Current_Hours : Current_Hours;
+            Current_Minute = Current_Minute < 10 ? "0" + Current_Minute : Current_Minute;
+            Current_Seconds = Current_Seconds < 10 ? "0" + Current_Seconds : Current_Seconds;
+
+
+          
+            time.innerHTML = `${Current_Hours} Hour : ${Current_Minute } Minute :${Current_Seconds} Second ${am_pm}`;
+            date.innerHTML = ` ${days[Current_weekday]} , ${Current_Date} / ${months[Current_Month]} / ${Current_year}`;
+            // document.getElementById('hour').innerHTML = Current_Hours;
+            // document.getElementById('minute').innerHTML = Current_Minute;
+            // document.getElementById('second').innerHTML = Current_Seconds;
+            // document.getElementById('ampm').innerHTML = am_pm;
+            // document.getElementById('month').innerHTML = months[Current_Month];
+            // document.getElementById('date').innerHTML = Current_Date;
+            // document.getElementById('year').innerHTML = Current_year;
+            // document.getElementById('weekday').innerHTML = days[Current_weekday];
+        };
+        setInterval(timeFunction, 1000);
+    </script>
+</body>
+
+</html>

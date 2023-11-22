@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For Loops</title>
+</head>
+
+<body>
+    <script>
+        for (let i = 1; i <= 10; i++) {
+            console.log("Hello!");
+        }
+
+
+        //Multipication
+        for (let x = 1; x <= 10; x++) {
+            console.log(x * 5);
+        }
+
+        //Printing Even Number
+        for (let i = 1; i <= 100; i++) {
+            if ((i % 2) == 0) { console.log(i); }
+        }
+
+        //Printing the even number b/w range given by the user
+        let a = Number(prompt("Enter the first Number:"));
+        let b = Number(prompt("Enter the Last  Number:"));
+        for (let i = a; i <= b; i++) {
+            if (i % 2 == 0) {
+                console.log(`Even number: ${i}`);
+            }
+        }
+
+
+        //Printing the Sum even number b/w range given by the user
+        let A = Number(prompt("Enter the first Number:"));
+        let B = Number(prompt("Enter the Last  Number:"));
+        let Sum = 0;
+        for (let i = A; i <= B; i++) {
+            if (i % 2 == 0) {
+                Sum += i
+            }
+        }
+        console.log('Sum of all even numbers is ' + Sum);
+
+
+
+        //Nested Loops
+        let i = 0;
+        for (let k = 1; k <= 5; k++) {
+            for (let j = 1; j <= 5; j++) {
+                // console.log("Hello")
+                i++
+            }
+            // console.log(k);
+        }
+        console.log('The All value of i are ' + i);
+        //Task1 console All the armstrong number between the two number 
+        //Task2 printing Prime Number in given range 
+        let X = 17;
+        let Y = 200;
+        for (var n = X; n <= Y; ++n) {
+            let p = 0;
+            for (let m = 2; m < n; m++) {
+                if ((n % m) == 0) {
+                    p += m;
+                }
+            }
+            if (p == 0) {
+                console.log(n);
+            }
+        }
+
+        let V = 36;
+        let Prime = 0
+        for (let n = 1; n <= V; n++) {
+            if (V % n == 0) {
+                Prime += n;
+            }
+        }
+        if (Prime == 0) {
+            console.log(n);
+        }
+
+        
+        // //for(var decalre;condition,changes){
+        // statement
+        // }
+    </script>
+</body>
+
+</html>

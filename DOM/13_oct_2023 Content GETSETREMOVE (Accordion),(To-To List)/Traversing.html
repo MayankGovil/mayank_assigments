@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Traversing</title>
+</head>
+<body>
+    <div id="The_Div">
+        <p id="para">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus consectetur rerum quas eveniet molestias suscipit maiores quis facere consequatur, officia quam recusandae maxime officiis dolorum fuga modi, natus incidunt omnis!
+        </p>  
+    </div>
+    <ul>
+        <li>hello</li>
+        <li>hello</li>
+        <li>hello</li>
+        <li>hello</li>
+    </ul>
+</body>
+<script type="text/javascript">
+    
+let div  = document.getElementById("The_Div");
+//to traget the nextSiblimg html elememt we using nextElementSibling dom method
+//the above is called get
+
+let ul = div.nextElementSibling;
+console.log(ul);
+//if we want to add ul in the div we use appendChild() method
+div.appendChild(ul);
+//the above is called SET()
+
+
+// to remove a child form any elemet like para in div
+//we can do it by removing its parent element
+let p = document.getElementById("para");
+console.log(p);
+div.removeChild(p);
+console.log(p);
+console.log(div);
+
+// this will delete that particular paragragh from DOM and this is call remove() 
+
+// /*or you can directly remove all children from an element*/
+// while (div.firstChild){
+//     div.removeChild(div.firstChild)//removes only one node at a time so while loop is used here for deleting multiple nodes
+//     }
+
+</script>
+</html>
